@@ -25,6 +25,8 @@ $(document).ready(function () {
             'price': '11.99',                 // Unit price.
             'quantity': '1'                   // Quantity.
         });
+        
+        ga('ecommerce:send');
 
         console.log("ga");
         ga('send', 'event', 'formulär', 'skickat', 'kontaktformulär', { 'hitCallback': function () { document.location = '/'; } });

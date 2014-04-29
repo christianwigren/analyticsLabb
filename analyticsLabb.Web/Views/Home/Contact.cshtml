@@ -4,6 +4,16 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
+<script>
+    $(document).ready(function() {
+        $('#formet').click(function () {
+            console.log("ga");
+            ga('send', 'event', 'formulär', 'skickat', 'kontaktformulär', { 'hitCallback': function () { document.location = '/'; } });
+            return false;
+        });
+    });
+</script>
+
 <address>
     One Analytics Way<br />
     Redmond, WA 98052-6399<br />
@@ -17,7 +27,7 @@
     <label>Tele:</label>
     <input type="text" /><br />
     <br />
-    <input type="submit" value="Skicka" onclick="console.log('GA'); ga('send', 'event', 'formulär', 'skickat', 'kontaktformulär', { 'hitCallback': function () { document.location = '/'; } }); return false"/>
+    <input id="formet" type="submit" value="Skicka"/>
 </form>
 
 
